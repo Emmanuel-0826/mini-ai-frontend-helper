@@ -1,8 +1,10 @@
+// src/pages/Home.jsx
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import Card from '../components/Card';
 import Form from '../components/Form';
+import ImageGenerator from '../components/ImageGenerator/ImageGenerator'; // ✅ ADD THIS
 import { useUser } from '../context/UserContext';
 import './Home.css';
 
@@ -11,7 +13,6 @@ const Home = () => {
   const [generatedContent, setGeneratedContent] = useState({});
   const [loading, setLoading] = useState(false);
 
-  // Simulate AI generation (you can replace with actual API call)
   const handleGenerate = (type) => {
     setLoading(true);
     setTimeout(() => {
@@ -71,6 +72,11 @@ const Home = () => {
             onGenerate={() => handleGenerate('card')}
           />
         </div>
+      </section>
+
+      {/* ✅ ADD THIS SECTION */}
+      <section className="image-generator-section">
+        <ImageGenerator />
       </section>
 
       <section className="form-section" id="form">

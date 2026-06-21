@@ -1,5 +1,7 @@
+// src/components/Navbar/Navbar.jsx
 import React from 'react';
 import { useUser } from '../../context/UserContext';
+import ThemeToggle from '../ThemeToggle/ThemeToggle'; // ✅ Import
 import './Navbar.css';
 
 const Navbar = () => {
@@ -20,9 +22,12 @@ const Navbar = () => {
           <a href="#contact">Contact</a>
         </div>
 
-        <div className="navbar-user">
-          <span className="user-avatar">👤</span>
-          <span className="user-name">{user.name}</span>
+        <div className="navbar-actions">
+          <ThemeToggle variant="button" size="sm" showTooltip tooltipText="Toggle theme" />
+          <div className="navbar-user">
+            <span className="user-avatar">👤</span>
+            <span className="user-name">{user.name}</span>
+          </div>
         </div>
       </div>
     </nav>

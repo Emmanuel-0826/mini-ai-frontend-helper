@@ -18,6 +18,8 @@
   right: 0;
   bottom: 0;
   background: rgba(255, 255, 255, 0.8);
+  /* ✅ Fix: Add both standard and vendor-prefixed backdrop-filter */
+  -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
   z-index: var(--z-modal);
   padding: 0;

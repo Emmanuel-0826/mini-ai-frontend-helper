@@ -1,9 +1,10 @@
+@import '../../styles/variables.css';
 .hero-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 4rem 6rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: var(--primary-gradient);
   color: white;
   min-height: 80vh;
   position: relative;
@@ -31,8 +32,8 @@
 }
 
 .hero-cta {
-  background: white;
-  color: #764ba2;
+  background: var(--bg-white);
+  color: var(--primary-dark)  ;
   border: none;
   padding: 1rem 2.5rem;
   font-size: 1.1rem;
