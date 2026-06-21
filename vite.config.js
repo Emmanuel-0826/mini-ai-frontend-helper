@@ -4,11 +4,17 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
+  base: '/mini-ai-frontend-helper/',  // ← Must match your repo name
   build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
     rollupOptions: {
-      input: {
-        main: 'index.html',
+      output: {
+        manualChunks: undefined,
       },
     },
+  },
+  server: {
+    port: 5173,
   },
 })
